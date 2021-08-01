@@ -1,0 +1,9 @@
+<script>
+    const largeurConteneur = 1200;
+    const largeurMargesInterieures = 50;
+    const nombreColonnes = 3;
+    const longueurInterColonnes = 20;
+    let largeurColonneTotale = largeurConteneur - (2*largeurMargesInterieures) - (longueurInterColonnes*(nombreColonnes-1));
+    let largeurColonne = largeurColonneTotale / nombreColonnes;
+    document.write(largeurColonne);
+</script>

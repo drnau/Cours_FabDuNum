@@ -1,0 +1,35 @@
+<form onsubmit="return verification()">
+    Nom :<input type="text" id="nom">
+    <input type="text" id="checknom" style="display: none;">
+    Prénom :<input type="text" id="prenom">
+    <input type="text" id="checkprenom" style="display: none;">
+    <input type="submit" value="valider" id="check">
+</form>
+<script>
+    let elCheck = document.getElementById("check")
+    let elNom = document.getElementById("nom")
+    let elPrenom = document.getElementById("prenom")
+    let elChecknom = document.getElementById("checknom")
+    let elCheckprenom = document.getElementById("checkprenom")
+    function verification() {
+        if (elNom.value.length == 0 && elPrenom.value.length == 0) {
+            elNom.style.borderColor = "red"
+            elPrenom.style.borderColor = "red"
+            return false
+        }
+        else if (elNom.value.length != 0 && elPrenom.value.length == 0){
+            elNom.style.borderColor = "black"
+            elPrenom.style.borderColor = "red"
+            return false
+        }
+        else if (elNom.value.length == 0 && elPrenom.value.length != 0){
+            elNom.style.borderColor = "red"
+            elPrenom.style.borderColor = "black"
+            return false
+        }
+        else {
+            return true
+        }
+    }
+        check.addEventListener("click", verification)
+</script>

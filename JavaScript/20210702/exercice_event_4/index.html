@@ -1,0 +1,30 @@
+<span id="nombreUn"></span> + <span id="nombreDeux"></span> =
+<input type="number" id="proposition">
+<button id="check">Check</button>
+<div id="verif"></div>
+<script>
+    let el1 = document.getElementById("nombreUn");
+    let el2 = document.getElementById("nombreDeux");
+    let myInput = document.getElementById("check");
+    let marchePas = document.getElementById("verif");
+    let v1, v2, v3
+    function nombreRandom(max, min) {
+        return Math.floor(Math.random() * (max - min)) + min
+    }
+    v1 = nombreRandom(10, 1);
+    el1.innerHTML = v1;
+    v2 = nombreRandom(10, 1);
+    el2.innerHTML = v2;
+    function addition() {
+        let userValue = document.getElementById("proposition").value;
+        v3 = v1 + v2
+        if (v3 == userValue) {
+            marchePas.innerHTML = "Bravo";
+        }
+        else {
+            marchePas.innerHTML = "Retente ta chance";
+        }
+    }
+    myInput.addEventListener('click', addition);
+
+</script>

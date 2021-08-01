@@ -1,0 +1,1 @@
+docker run --name=naboo1 -e WORDPRESS_DB_PASSWORD=nikana -e WORDPRESS_DB_USER=anakin -e WORDPRESS_DB_NAME=droide -p 8080:80 -d wordpress

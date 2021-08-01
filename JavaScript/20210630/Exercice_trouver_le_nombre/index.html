@@ -1,0 +1,84 @@
+<form action="" method="GET">
+    <p id="text">Veuillez choisir la difficulté :</p>
+    <button id="difffacile" onclick="difficulte('facile')">Facile</button>
+    <button id="diffmedium" onclick="difficulte('intermediaire')">Intermédiaire</button>
+    <button id="diffdiff" onclick="difficulte('difficile')">Difficile</button><br>
+    <input type="number" id="userNumber" style="display: none;">
+    <button id="button" style="display: none" onclick="verifier()">Essayer</button><br>
+</form>
+<div id="resultat"></div><br>
+<div id="nombreEssai"></div><br>
+<div id="essai"></div><br>
+<div id="nombre"></div>
+<script>
+    let valeurEssai = 0
+    let min = 1;
+    let max = 1000;
+    let nombre = nombreRandom(min, max)
+    function verifier() {
+        event.preventDefault()
+        valeurEssai--
+        let proposition = document.getElementById("userNumber").value
+        if (valeurEssai > 0) {
+            if (proposition == nombre) {
+                document.getElementById("resultat").innerHTML = "Vous avez gagné"
+                document.getElementById("essai").innerHTML += "" + proposition + "."
+                document.getElementById("nombreEssai").innerHTML = ""
+            }
+            else if (proposition > nombre) {
+                document.getElementById("resultat").innerHTML = "Nombre trop grand"
+                document.getElementById("nombreEssai").innerHTML = "il vous reste " + valeurEssai + " tentatives"
+                document.getElementById("essai").innerHTML += "" + proposition + ", "
+            }
+            else {
+                document.getElementById("resultat").innerHTML = "Nombre trop petit"
+                document.getElementById("nombreEssai").innerHTML = "il vous reste " + valeurEssai + " tentatives"
+                document.getElementById("essai").innerHTML += "" + proposition + ", "
+            }
+        }
+        else {
+            document.getElementById("resultat").innerHTML = "Vous avez perdu"
+            document.getElementById("nombreEssai").innerHTML = ""
+            document.getElementById("essai").innerHTML += "" + proposition + "."
+            document.getElementById("nombre").innerHTML = "Il fallait trouver " + nombre
+
+        }
+    }
+    function nombreRandom(max) {
+        return Math.floor(Math.random() * (max - 1)) + 1
+    }
+
+    function difficulte(diff) {
+        if (diff == 'facile') {
+            event.preventDefault()
+            document.getElementById("userNumber").style.display = "block"
+            document.getElementById("button").style.display = "block"
+            document.getElementById("difffacile").style.display = "none"
+            document.getElementById("diffmedium").style.display = "none"
+            document.getElementById("diffdiff").style.display = "none"
+            document.getElementById("text").style.display = "none"
+            return valeurEssai = 20
+
+        }
+        else if (diff == 'intermediaire') {
+            event.preventDefault()
+            document.getElementById("userNumber").style.display = "block"
+            document.getElementById("button").style.display = "block"
+            document.getElementById("difffacile").style.display = "none"
+            document.getElementById("diffmedium").style.display = "none"
+            document.getElementById("diffdiff").style.display = "none"
+            document.getElementById("text").style.display = "none"
+            return valeurEssai = 10
+        }
+        else if (diff == 'difficile') {
+            event.preventDefault()
+            document.getElementById("userNumber").style.display = "block"
+            document.getElementById("button").style.display = "block"
+            document.getElementById("difffacile").style.display = "none"
+            document.getElementById("diffmedium").style.display = "none"
+            document.getElementById("diffdiff").style.display = "none"
+            document.getElementById("text").style.display = "none"
+            return valeurEssai = 5
+        }
+    }
+</script>

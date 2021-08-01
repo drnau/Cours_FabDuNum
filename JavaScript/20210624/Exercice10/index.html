@@ -1,0 +1,26 @@
+<!-- Demander à un utilisateur son âge
+S’il est majeur, écrire : “Entrée autorisée”
+S’il est mineur, écrire : “Entrée interdite”
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="age"></div>
+
+    <script>
+        let age = prompt("Quel est ton âge ?");
+        if (age <18) {
+            document.getElementById("age").innerHTML="Entrée interdite"
+        }
+        else {
+            document.getElementById("age").innerHTML="Entrée autorisée"
+        }
+    </script>
+</body>
+</html>

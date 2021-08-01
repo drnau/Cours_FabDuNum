@@ -1,0 +1,30 @@
+<!-- Utiliser JavaScript pour afficher la valeur en euros de 2001 francs.
+Avec un champs Input, un button et une zone de résultat -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Entrez une somme en franc :<input type="number" id="argent"><br>
+    <button onclick="conversionEuro()">Convertire les francs en euros</button>
+    <div id="nombre"></div>
+    <script>
+        function convert (){
+            let argent=document.getElementById("argent").value;
+            let valEuros=francsVersEuro(argent)
+            document.getElementById("nombre").innerHTML=valEuros+"euros"
+
+        }
+        function francsVersEuro(){
+            let argentEuro=argent/6.56
+            return argentEuro
+        }
+    </script>
+</body>
+</html>

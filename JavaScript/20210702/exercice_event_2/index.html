@@ -1,0 +1,12 @@
+Prénom :<input id="input" type="text">
+<script>
+    myInput=document.getElementById("input")
+    function checkInput(){
+        this.style.borderColor='green'
+    }
+    function checkOutput(){
+        this.style.borderColor='black'
+    }
+    myInput.addEventListener('blur',checkOutput)
+    myInput.addEventListener('click',checkInput)
+</script>

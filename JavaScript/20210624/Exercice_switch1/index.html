@@ -1,0 +1,27 @@
+<!-- Convertir l’exo if / else if sur la majorité en switch -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="age"></div>
+    <script>
+        let age = Number(prompt("Quel est ton âge ?"));
+        switch (true) {
+            case (age<18):
+                document.getElementById("age").innerHTML="Entrée interdite"
+                break;
+            case (age == 18):
+                document.getElementById("age").innerHTML="Entrée autorisée, félicitation vous êtes majeur"
+                break;
+            default:
+                document.getElementById("age").innerHTML="Entrée autorisée"
+                break;
+        }
+    </script>
+</body>
+</html>

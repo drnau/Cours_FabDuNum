@@ -1,0 +1,11 @@
+<!-- Faire la même chose mais cette fois avec Nom et Prénom -->
+
+<div id="message"></div>
+<script>
+    prenom = prompt("Quel est votre prénom ?")
+    nom = prompt("Quel est votre nom ?")
+    identite(prenom, nom)
+    function identite (prenom, nom){
+        document.getElementById("message").innerHTML="Merci "+prenom+" "+nom
+    }
+</script>

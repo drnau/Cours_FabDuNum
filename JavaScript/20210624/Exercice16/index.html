@@ -1,0 +1,14 @@
+<!-- Ecrire 2 fonctions. Une qui écrit “Bonjour monsieur”, une autre qui écrit “Bonsoir monsieur”.
+Chaque fonction est appelée par son propre bouton. -->
+
+<button onclick="Bonjour ()">Bonjour ?</button>
+<button onclick="Bonsoir ()"> Bonsoir ?</button>
+<div id="message"></div>
+<script>
+    function Bonjour (){
+        document.getElementById("message").innerHTML="Bonjour monsieur"
+    }
+    function Bonsoir (){
+        document.getElementById("message").innerHTML="Bonsoir monsieur"
+    }
+</script>

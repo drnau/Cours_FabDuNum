@@ -1,0 +1,14 @@
+Prénom :<input id="input" type="text">
+<script>
+    let myInput = document.getElementById("input");
+    let myMessage = document.getElementById("message");
+    function checkInput() {
+        if (this.value.length < 5) {
+            this.style.borderColor = 'red';
+        }
+        else {
+            this.style.borderColor = 'green';
+        }
+    }
+    myInput.addEventListener('keydown', checkInput);
+</script>

@@ -1,0 +1,61 @@
+<input type="text" id="resultat"><hr>
+<button id="chiffreSept" value="7">7</button>
+<button id="chiffreHuit" value ="8">8</button>
+<button id="chiffreNeuf" value="9">9</button>
+<button id="calcDivision" value="/">/</button><br>
+<button id="chiffreQuatre" value="4">4</button>
+<button id="chiffreCinq" value="5">5</button>
+<button id="chiffreSix" value="6">6</button>
+<button id="calcMultipli" value="*">*</button><br>
+<button id="chiffreUn" value="1">1</button>
+<button id="chiffreDeux" value="2">2</button>
+<button id="chiffreTrois" value="3">3</button>
+<button id="calcSous" value="-">-</button><br>
+<button id="chiffreZero" value="0">0</button>
+<button id="calcResultat">=</button>
+<button id="calcDeci" value=".">.</button>
+<button id="calcPlus" value="+">+</button>
+
+<script>
+    let sept=document.getElementById("chiffreSept");
+    let huit=document.getElementById("chiffreHuit");
+    let neuf=document.getElementById("chiffreNeuf");
+    let division=document.getElementById("calcDivision");
+    let quatre=document.getElementById("chiffreQuatre");
+    let cinq=document.getElementById("chiffreCinq");
+    let six=document.getElementById("chiffreSix");
+    let multiplication=document.getElementById("calcMultipli");
+    let un=document.getElementById("chiffreUn");
+    let deux=document.getElementById("chiffreDeux");
+    let trois=document.getElementById("chiffreTrois");
+    let soustraction=document.getElementById("calcSous");
+    let zero=document.getElementById("chiffreZero");
+    let egal=document.getElementById("calcResultat");
+    let plus=document.getElementById("calcPlus")
+    let decimal=document.getElementById("calcDeci")
+    let elResultat=document.getElementById("resultat")
+    function ajoute() {
+        elResultat.value+=this.value
+    }
+    function calcul() {
+        let resultat=eval(elResultat.value)
+        elResultat.value=resultat
+    }
+    egal.addEventListener("click", calcul)
+    sept.addEventListener("click", ajoute)
+    huit.addEventListener("click", ajoute)
+    neuf.addEventListener("click", ajoute)
+    division.addEventListener("click", ajoute)
+    quatre.addEventListener("click", ajoute)
+    cinq.addEventListener("click", ajoute)
+    six.addEventListener("click", ajoute)
+    multiplication.addEventListener("click", ajoute)
+    un.addEventListener("click", ajoute)
+    deux.addEventListener("click", ajoute)
+    trois.addEventListener("click", ajoute)
+    soustraction.addEventListener("click", ajoute)
+    zero.addEventListener("click", ajoute)
+    decimal.addEventListener("click", ajoute)
+    plus.addEventListener("click", ajoute)
+
+</script>

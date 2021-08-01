@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="largeurColonne"></div>
+    <script>
+        let largeurConteneur=prompt ("Indiquez la largeur du conteneur")
+        let largeurMargesInterieures=prompt ("Indiquez la largeur de la marge intérieur")
+        let nombreColonnes=prompt ("Indiquez le nombre de colonne")
+        let largeurInterColonnes=prompt ("Indiquez la largeur entre les colonnes")
+        let largeurColonneTotale = largeurConteneur - (2*largeurMargesInterieures) - (largeurInterColonnes*(nombreColonnes-1));
+        let largeurColonne = largeurColonneTotale / nombreColonnes;
+        document.getElementById("largeurColonne").innerHTML=largeurColonne
+    </script>
+</body>
+</html>

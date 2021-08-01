@@ -1,0 +1,42 @@
+<!-- Adapter l’exo en utilisant l’objet Date -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="jour"></div>
+    <script>
+        let jour =new Date().getDay();
+        switch (jour) {
+            case 1:
+                document.getElementById("jour").innerHTML="Lundi"
+                break;
+            case 2:
+                document.getElementById("jour").innerHTML="Mardi"
+                break;
+            case 3:
+                document.getElementById("jour").innerHTML="Mercredi"
+                break;
+            case 4:
+                document.getElementById("jour").innerHTML="Jeudi"
+                break;
+            case 5:
+                document.getElementById("jour").innerHTML="Vendredi"
+                break;
+            case 6:
+                document.getElementById("jour").innerHTML="Samedi"
+                break;
+            case 0:
+                document.getElementById("jour").innerHTML="Dimanche"
+                break; 
+            default:
+                document.getElementById("jour").innerHTML="Ce numéro ne correspond pas à un jour de la semaine"
+                break;
+        }
+    </script>
+</body>
+</html>

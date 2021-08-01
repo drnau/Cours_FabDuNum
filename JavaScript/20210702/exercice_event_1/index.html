@@ -1,0 +1,13 @@
+<input id="input" type="text">
+<script>
+    myInput=document.getElementById("input")
+    function checkInput(){
+        if (this.value.length >= 5) {
+            this.style.backgroundColor='green'
+        }
+        else {
+            this.style.backgroundColor='red'
+        }
+    }
+    myInput.addEventListener('blur',checkInput)
+</script>

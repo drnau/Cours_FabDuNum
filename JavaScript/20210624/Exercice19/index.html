@@ -1,0 +1,15 @@
+<!-- Refactoriser l’exo 16 “Bonjour monsieur” ... “Bonsoir monsieur” pour qu’il fonctionne avec une seule fonction  -->
+
+<button onclick="Bon ('bonjour')">Bonjour ?</button>
+<button onclick="Bon ('bonsoir')">Bonsoir ?</button>
+<div id="message"></div>
+<script>
+    function Bon (moment){
+        if (moment == "bonjour") {
+            document.getElementById("message").innerHTML="Bonjour monsieur"
+        }
+        else {
+            document.getElementById("message").innerHTML="Bonsoir monsieur"     
+        }
+    }
+</script>

@@ -1,0 +1,44 @@
+<!-- Ecrire le résultat du jour de la semaine dans un h2 en utilisant le InnerHTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2 id="jour"></h2>
+    <script>
+        let jour =new Date().getDay();
+        let message
+        switch (jour) {
+            case 1:
+                message="Lundi"
+                break;
+            case 2:
+                message="Mardi"
+                break;
+            case 3:
+                message="Mercredi"
+                break;
+            case 4:
+                message="Jeudi"
+                break;
+            case 5:
+                message="Vendredi"
+                break;
+            case 6:
+                message="Samedi"
+                break;
+            case 0:
+                message="Dimanche"
+                break; 
+            default:
+                message="Ce numéro ne correspond pas à un jour de la semaine"
+                break;
+        }
+        document.getElementById("jour").innerHTML= message
+    </script>
+</body>
+</html>

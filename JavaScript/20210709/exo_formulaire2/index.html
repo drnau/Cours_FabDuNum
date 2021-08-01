@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="return verification()">
+        Nom :<input type="text" id="nom"><br>
+        Prenom :<input type="text" id="prenom"><br>
+        CGU :<input type="checkbox" id="cgu"><br>
+        Mot de passe :<input type="password" id="pwd"><br>
+        Vérifier le mot de passe :<input type="password" id="verifPwd"><br>
+        <span id=sexe>Sexe :</span>
+        M <input type="radio" id="masculin" name="sexe">
+        F <input type="radio" id="feminin" name="sexe"><br>
+        Ville :
+        <select id="ville">
+            <option value="choisirVille">Veuillez choisir une ville</option>
+            <option value="Paris">Paris</option>
+            <option value="Bordeaux">Bordeaux</option>
+            <option value="Poitiers">Poitiers</option>
+            <option value="Autres">Autres</option>
+        </select><br>
+        <input type="submit">
+    </form>
+    <script>
+        let elNom = document.getElementById("nom");
+        let elPrenom = document.getElementById("prenom");
+        let elCGU = document.getElementById("cgu");
+        let elPwd = document.getElementById("pwd");
+        let elPwdVerif = document.getElementById("verifPwd");
+        let elVille = document.getElementById("ville");
+        let elMasc = document.getElementById("masculin")
+        let elFem = document.getElementById("feminin")
+        let elSexe = document.getElementById("sexe")
+        let elTextCgu = document.getElementById("textcgu")
+        function verification() {
+            let erreur = false
+            if (elNom.value.length == 0) {
+                elNom.style.borderColor = "red"
+                erreur = true
+            }
+            else {
+                elNom.style.borderColor = "green"
+            }
+            if (elPrenom.value.length == 0) {
+                elPrenom.style.borderColor = "red"
+                erreur = true
+            }
+            else {
+                elPrenom.style.borderColor = "green"
+            }
+            if (elCGU.checked == false) {
+                elCGU.style.outline = "3px solid red"
+                erreur = true
+            }
+            else {
+                elCGU.style.outline = "3px solid green"
+            }
+            if (elPwd.value.length < 6) {
+                elPwd.style.borderColor = "red"
+                erreur = true
+            }
+            else {
+                elPwd.style.borderColor = "green"
+            }
+            if ((elPwd.value.length != elPwdVerif.value.length) || elPwdVerif.value.length<6) {
+                elPwdVerif.style.borderColor = "red"
+                erreur = true
+            }
+            else {
+                elPwdVerif.style.borderColor = "green"
+            }
+            if (elMasc.checked == false && elFem.checked == false) {
+                elSexe.style.color = "red"
+                erreur = true
+            }
+            else {
+                elSexe.style.color = "green"
+            }
+            if (elVille.selectedIndex == 0) {
+                elVille.style.borderColor = "red"
+                erreur = true
+            }
+            else {
+                elVille.style.borderColor = "green"
+            }
+            if (erreur) {
+                return false
+            }
+            else {
+                return true
+            }
+        }
+    </script>
+</body>
+
+</html>

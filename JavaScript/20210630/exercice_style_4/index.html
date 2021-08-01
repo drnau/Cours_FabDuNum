@@ -1,0 +1,13 @@
+<input id="password" type="password">
+<button onclick="afficher()">Masquer/démasquer</button>
+<script>
+    function afficher() {
+        if (document.getElementById("password").type == "password") {
+            document.getElementById("password").type = "text"
+        }
+        else {
+            document.getElementById("password").type = "password"
+        }
+    }
+
+</script>

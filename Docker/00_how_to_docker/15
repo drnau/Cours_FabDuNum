@@ -1,0 +1,1 @@
+docker run --name kylo-Ren -d -e PMA_HOST=usine-android -p 8081:80 phpmyadmin

@@ -1,0 +1,9 @@
+<script>
+    let largeurConteneur=prompt ("Indiquez la largeur du conteneur")
+    let largeurMargesInterieures=prompt ("Indiquez la largeur de la marge intérieur")
+    let nombreColonnes=prompt ("Indiquez le nombre de colonne")
+    let largeurInterColonnes=prompt ("Indiquez la largeur entre les colonnes")
+    let largeurColonneTotale = largeurConteneur - (2*largeurMargesInterieures) - (largeurInterColonnes*(nombreColonnes-1));
+    let largeurColonne = largeurColonneTotale / nombreColonnes;
+    document.write(largeurColonne);
+</script>

@@ -1,0 +1,8 @@
+docker run -it debian
+apt-get upgrade
+apt-get update
+apt install git
+apt install build-essential
+mkdir Git
+cd Git/
+git init

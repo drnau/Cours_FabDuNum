@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Init()">Lancer la fonction</button>
+    <div id="nombre"></div>
+    <script>
+        function Init(){
+            let nombre1= Number(prompt("Entrez le premier nombre?"))
+            let nombre2= Number(prompt("Entrez le second?"))
+            let nombre3= Number(prompt("Entrez le dernier?"))
+            let laMoyenne=moyenne(nombre1, nombre2, nombre3)
+            let minimum=plusPetitNombre(nombre1, nombre2, nombre3)
+            document.getElementById("nombre").innerHTML="la valeur moyenne est de "+laMoyenne+", la plus petite valeur est "+minimum+"."                  
+        }
+        
+        function moyenne (nombre1, nombre2, nombre3){
+            laValeurMoyenne=(nombre1+nombre2+nombre3)/3
+            return laValeurMoyenne
+        }
+        
+        function plusPetitNombre (nombre1, nombre2, nombre3){
+            let petitNombre
+            switch (true) {
+                case (nombre1<nombre2)&&(nombre1<nombre3):
+                    return petitNombre=nombre1                    
+                    break;
+                case (nombre2<nombre1)&&(nombre2<nombre3):
+                    return petitNombre=nombre2                 
+                    break;
+                case (nombre3<nombre1)&&(nombre3<nombre2):
+                    return petitNombre=nombre3                   
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
+
+

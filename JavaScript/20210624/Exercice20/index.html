@@ -1,0 +1,24 @@
+<!-- Créer une page HTML vide,qui comprendra un titre <h1> qui sera "Écriture d'une fonction simple sans paramètre ni return", qui comprendra un texte "Cliquez sur le bouton pour lancer la fonction : ",qui sera suivi d'un bouton sur lequel on lira "Lancer la fonction".
+Un clic sur ce bouton déclenchera une fonction qui:
+   * demandera la hauteur d'un rectangle;
+   * demandera la largeur de ce rectangle;
+   * calculera la surface de ce rectangle;
+   * affichera la surface calculée de ce rectangle.
+ -->
+
+ <h1>Ecriture d'une fonction simple sans paramètre ni return</h1>
+ Cliquez sur le bouton pour lancer la fonction<br>
+ <button onclick="activationFonction()">Lancer la fonction</button>
+ <div id="surface"></div>
+
+ <script>
+    function activationFonction(){
+        let hauteur= Number (prompt("Quelle est la hauteur ?"))
+        let largeur= Number (prompt("Quelle est la largeur ?"))
+        calculSurface(hauteur, largeur)
+        document.getElementById("surface").innerHTML="La surface du rectangle est de "+laSurfaceRectangle
+        }
+    function calculSurface (hauteur, largeur){
+        laSurfaceRectangle=hauteur*largeur    
+     }
+ </script>

@@ -1,0 +1,12 @@
+<input type="number" id="nombre1"> + <input type="number" id="nombre2"> <button id="egal">=</button><span id="calc"></span>
+<script>
+    let nombreUn=Number(document.getElementById("nombre1").value)
+    let nombreDeux=Number(document.getElementById("nombre2").value)
+    let resultatCalcul = document.getElementById("calc")
+    let lancerCalcul = document.getElementById("egal")
+    function calculatrice() {
+        let calcul = nombreUn + nombreDeux
+        resultatCalcul.innerHTML= " "+calcul
+    }
+    lancerCalcul.addEventListener("click", calculatrice)
+</script>

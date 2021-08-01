@@ -1,0 +1,10 @@
+<!-- Construire une fonction qui affiche un message de politesse associé à un prénom. Le prénom est donc passé en paramètre. -->
+
+<div id="message"></div>
+<script>
+    prenom = prompt("Quel est votre prénom ?")
+    identite(prenom)
+    function identite (prenom){
+        document.getElementById("message").innerHTML="Merci "+prenom
+    }
+</script>

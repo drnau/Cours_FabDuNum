@@ -1,0 +1,29 @@
+<input type="number" id="nombre1">
+<button id="additon">+</button>
+<input type="number" id="nombre2"> 
+<button id="egal">=</button>
+<span id="detailCalcul"></span>
+<script>
+    let nombreUn=document.getElementById("nombre1")
+    let nombreDeux=document.getElementById("nombre2")
+    let lancerCalcul = document.getElementById("egal")
+    let calculDetail = document.getElementById("detailCalcul")
+    function calculatrice() {
+        let calcul = eval(detailCalcul.innerHTML)
+        calculDetail.innerHTML= calcul
+    }
+    function ecrireCalculVal1() {
+        calculDetail.innerHTML += nombreUn.value
+    }
+    function ecrireCalculVal2() {
+        calculDetail.innerHTML += nombreDeux.value
+    }
+    function ecrireCalculValAdd() {
+        calculDetail.innerHTML += "+"
+    }
+    lancerCalcul.addEventListener("click", calculatrice)
+    nombreUn.addEventListener("blur", ecrireCalculVal1)
+    nombreDeux.addEventListener("blur", ecrireCalculVal2)
+    document.getElementById("additon").addEventListener("click",ecrireCalculValAdd)
+
+</script>

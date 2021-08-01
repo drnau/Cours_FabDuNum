@@ -1,0 +1,25 @@
+<!-- reprendre l’exo 10. Si l’internaute à 18 ans, le féliciter de sa majorité. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="age"></div>
+    <script>
+        let age = prompt("Quel est ton âge ?");
+        if (age <18) {
+            document.getElementById("age").innerHTML="Entrée interdite"
+        }
+        else if (age == 18){
+            document.getElementById("age").innerHTML="Entrée autorisée, félicitation pour votre majorité."
+        }
+        else {
+            document.getElementById("age").innerHTML="Entrée autorisée"
+        }
+    </script>
+</body>
+</html>

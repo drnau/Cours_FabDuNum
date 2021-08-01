@@ -1,0 +1,40 @@
+<input type="password" id="pwd"><br>
+Votre mot de passe doit contenir :<br>
+<div id="caractere">Entre 8 et 16 caractères</div>
+<div id="chiffre">Au moins un chiffre</div>
+<div id="locas">Au moins une minuscule</div>
+<div id="upcas">Au moins une majuscule</div>
+<script>
+    let myCaractere = document.getElementById("caractere");
+    let myInput = document.getElementById("pwd")
+    let mySubmit = document.getElementById("check")
+    function verification() {
+        if (myInput.value.length >= 8 && myInput.value.length <= 16) {
+            document.getElementById("caractere").style.color = 'green'
+        }
+        else {
+            document.getElementById("caractere").style.color = 'red'
+        }
+
+        if (/[0-9]/.test(myInput.value)) {
+            document.getElementById("chiffre").style.color = 'green'
+        }
+        else {
+            document.getElementById("chiffre").style.color = 'red'
+        }
+        if (/[a-z]/.test(myInput.value)) {
+            document.getElementById("locas").style.color = 'green'
+        }
+        else {
+            document.getElementById("locas").style.color = 'red'
+        }
+        if (/[A-Z]/.test(myInput.value)) {
+            document.getElementById("upcas").style.color = 'green'
+        }
+        else {
+            document.getElementById("upcas").style.color = 'red'
+        }
+    }
+    myInput.addEventListener('keyup', verification);
+
+</script>
